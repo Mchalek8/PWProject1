@@ -1,0 +1,18 @@
+[
+	{
+		"Username": "TomLee",
+		"FirstName": "Tom",
+		"LastName": "Lee",
+		"email": "tom.lee1234@example.com",
+		"password": "test123",
+		"validity": "valid"
+	},
+	{
+		"Username": "SandraTaylor",
+		"FirstName": "Sandra",
+		"LastName": "Taylor",		
+		"email": "Sandra.Taylor123@example.com",
+		"password": "test321",
+		"validity": "valid"
+	}
+]

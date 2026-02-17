@@ -1,0 +1,18 @@
+[
+	{
+		"LogIn": "Log in",
+		"LogOut": "Log out",
+		"Register": "Register",
+		"searchComputerValue": "computer",
+		"searchLaptopValue": "laptop",
+        "searchGiftValue": "gift"
+	},
+	{
+		"LogIn": "Log in",
+		"LogOut": "Log out",
+		"Register": "Register",
+		"searchComputerValue": "computer",
+		"searchLaptopValue": "laptop2",
+        "searchGiftValue": "gift"
+	}      
+]
