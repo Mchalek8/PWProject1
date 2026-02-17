@@ -1,5 +1,4 @@
-import { Locator, Page, expect } from "@playwright/test";
-//import {faker} from '@faker-js/faker';
+import { Locator, Page } from "@playwright/test";
 
 export class DemoWebShop {
     readonly page: Page;

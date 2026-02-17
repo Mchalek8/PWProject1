@@ -1,6 +1,4 @@
 import { Locator, Page, expect } from "@playwright/test";
-import { text } from "node:stream/consumers";
-//import {faker} from '@faker-js/faker';
 
 export class DemoWebShopSearch {
     readonly page: Page;
