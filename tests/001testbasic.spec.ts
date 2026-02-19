@@ -38,7 +38,6 @@ for (const { Username, FirstName, LastName, email, password } of loginData) {
 test('Basic search test', {tag :['@PlaywrightWithJenkins']}, async ({ page, demoWebShopPage, demoWebShopSearchPage }) => {
   // Navigate to the demo webshop, perform a search.
   await demoWebShopPage.gotoDemoWebShop();
-  console.log(testData[1].searchLaptopValue);
   await demoWebShopPage.setSearchField(testData[0].searchComputerValue);
   await demoWebShopPage.confirmSearch();
   //await page.waitForTimeout(4000);
@@ -49,6 +48,7 @@ test('Basic search test', {tag :['@PlaywrightWithJenkins']}, async ({ page, demo
     expect(itemText.toLowerCase()).toContain(testData[0].searchComputerValue.toLowerCase());
   }
   );
+  console.log("Test was executed.");
 });
 
 test('Random Register test', async ({ page, demoWebShopRegisterPage, demoWebShopPage }) => {
