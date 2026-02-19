@@ -35,7 +35,7 @@ for (const { Username, FirstName, LastName, email, password } of loginData) {
   });
 };
 
-test.only('Basic search test', async ({ page, demoWebShopPage, demoWebShopSearchPage }) => {
+test.only('Basic search test', {tag :['@PlaywrightWithJenkins']}, async ({ page, demoWebShopPage, demoWebShopSearchPage }) => {
   // Navigate to the demo webshop, perform a search.
   await demoWebShopPage.gotoDemoWebShop();
   console.log(testData[1].searchLaptopValue);
