@@ -75,7 +75,7 @@ test('Random Register test', async ({ page, demoWebShopRegisterPage, demoWebShop
 });
 
 for (let i = 0; i < loginData.length; i++) {
-  test(`Basic Login ${loginData[i].Username} test`, async ({ page, demoWebShopPage, demoWebShopLoginPage }) => {
+  test(`Basic Login ${loginData[i].Username} test`, {tag :['@PlaywrightWithJenkins']}, async ({ page, demoWebShopPage, demoWebShopLoginPage }) => {
     // Navigate to the demo webshop
     await demoWebShopPage.gotoDemoWebShop();
 
