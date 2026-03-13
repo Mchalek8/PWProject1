@@ -1,0 +1,13 @@
+{
+	"servers": {
+		"filesystem": {
+			"command": "npx",
+			"args": [
+				"-y",
+				"@modelcontextprotocol/server-filesystem",
+				"c:\\_workspace\\PWProject1"
+			],
+			"type": "stdio"
+		}
+	}
+}

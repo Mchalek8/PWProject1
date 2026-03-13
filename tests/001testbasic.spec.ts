@@ -35,7 +35,7 @@ for (const { Username, FirstName, LastName, email, password } of loginData) {
   });
 };
 
-test('Basic search test', {tag :['@PlaywrightWithJenkins']}, async ({ page, demoWebShopPage, demoWebShopSearchPage }) => {
+test('Basic search test', {tag :['@sanity']}, async ({ page, demoWebShopPage, demoWebShopSearchPage }) => {
   // Navigate to the demo webshop, perform a search.
   await demoWebShopPage.gotoDemoWebShop();
   await demoWebShopPage.setSearchField(testData[0].searchComputerValue);
@@ -48,7 +48,20 @@ test('Basic search test', {tag :['@PlaywrightWithJenkins']}, async ({ page, demo
     expect(itemText.toLowerCase()).toContain(testData[0].searchComputerValue.toLowerCase());
   }
   );
-  console.log("Test was executed.");
+  console.log("Basic search test was executed.");
+});
+
+test('Check Top Menu Links Texts', {tag :['@sanity']}, async ({ page, demoWebShopPage }) => {
+  // Navigate to the demo webshop, perform a search.
+  await demoWebShopPage.gotoDemoWebShop();
+  //await page.waitForTimeout(4000);
+
+  // Assertions
+  await expect(demoWebShopPage.getBooksTopMenText).resolves.toContain(testData[0].booksTopMenText);
+  await expect(demoWebShopPage.getComputersTopMenText).resolves.toContain(testData[0].computersTopMenText);
+  await expect(demoWebShopPage.getElectronicsTopMenText).resolves.toContain(testData[0].electronicsTopMenText);
+
+  console.log("Check Top Menu Links Texts Test was executed.");
 });
 
 test('Random Register test', async ({ page, demoWebShopRegisterPage, demoWebShopPage }) => {

@@ -5,7 +5,9 @@
 		"Register": "Register",
 		"searchComputerValue": "computer",
 		"searchLaptopValue": "laptop",
-        "searchGiftValue": "gift"
+        "booksTopMenText": "Books",
+		"computersTopMenText": "Computers",
+		"electronicsTopMenText": "Electronics"
 	},
 	{
 		"LogIn": "Log in",

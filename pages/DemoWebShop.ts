@@ -8,6 +8,10 @@ export class DemoWebShop {
     readonly loginLink: Locator;
     readonly logoutLink: Locator;
     readonly logedInUserLink: Locator;
+    readonly booksTopMenuLink: Locator;
+    readonly computersTopMenuLink: Locator;
+    readonly electronicsTopMenuLink: Locator;
+    
 
 
     constructor(page: Page) {
@@ -18,6 +22,9 @@ export class DemoWebShop {
         this.loginLink = page.getByRole('link', { name: 'Log in' })
         this.logoutLink = page.getByRole('link', { name: 'Log out' });
         this.logedInUserLink = page.locator('div[class="header-links"] a[class="account"]');
+        this.booksTopMenuLink = page.getByRole('link', { name: 'Books' });
+        this.computersTopMenuLink = page.getByRole('link', { name: 'Computers' });
+        this.electronicsTopMenuLink = page.getByRole('link', { name: 'Electronics' });
     }
 
     async gotoDemoWebShop(): Promise<void> {
@@ -46,5 +53,17 @@ export class DemoWebShop {
 
     async getLogedInUserLinkValue(): Promise<string> {
         return await this.logedInUserLink.textContent() || '';
+    }
+
+    async getBooksTopMenText(): Promise<string> {
+        return await this.booksTopMenuLink.textContent() || '';
+    }
+
+    async getComputersTopMenText(): Promise<string> {
+        return await this.computersTopMenuLink.textContent() || '';
+    }
+
+    async getElectronicsTopMenText(): Promise<string> {
+        return await this.electronicsTopMenuLink.textContent() || '';
     }
 }
