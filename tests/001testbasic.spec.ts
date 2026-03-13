@@ -57,9 +57,9 @@ test('Check Top Menu Links Texts', {tag :['@sanity']}, async ({ page, demoWebSho
   //await page.waitForTimeout(4000);
 
   // Assertions
-  await expect(demoWebShopPage.getBooksTopMenText).resolves.toContain(testData[0].booksTopMenText);
-  await expect(demoWebShopPage.getComputersTopMenText).resolves.toContain(testData[0].computersTopMenText);
-  await expect(demoWebShopPage.getElectronicsTopMenText).resolves.toContain(testData[0].electronicsTopMenText);
+  await expect(demoWebShopPage.getBooksTopMenText()).resolves.toContain(testData[0].booksTopMenText);
+  await expect(demoWebShopPage.getComputersTopMenText()).resolves.toContain(testData[0].computersTopMenText);
+  await expect(demoWebShopPage.getElectronicsTopMenText()).resolves.toContain(testData[0].electronicsTopMenText);
 
   console.log("Check Top Menu Links Texts Test was executed.");
 });

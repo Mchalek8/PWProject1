@@ -22,9 +22,9 @@ export class DemoWebShop {
         this.loginLink = page.getByRole('link', { name: 'Log in' })
         this.logoutLink = page.getByRole('link', { name: 'Log out' });
         this.logedInUserLink = page.locator('div[class="header-links"] a[class="account"]');
-        this.booksTopMenuLink = page.getByRole('link', { name: 'Books' });
-        this.computersTopMenuLink = page.getByRole('link', { name: 'Computers' });
-        this.electronicsTopMenuLink = page.getByRole('link', { name: 'Electronics' });
+        this.booksTopMenuLink = page.getByRole('link', { name: 'Books' }).first();
+        this.computersTopMenuLink = page.getByRole('link', { name: 'Computers' }).first();
+        this.electronicsTopMenuLink = page.getByRole('link', { name: 'Electronics' }).first();
     }
 
     async gotoDemoWebShop(): Promise<void> {
@@ -57,6 +57,7 @@ export class DemoWebShop {
 
     async getBooksTopMenText(): Promise<string> {
         return await this.booksTopMenuLink.textContent() || '';
+        //return await this.booksTopMenuLink.textContent() || '';
     }
 
     async getComputersTopMenText(): Promise<string> {
