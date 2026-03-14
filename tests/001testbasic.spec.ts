@@ -103,4 +103,5 @@ for (let i = 0; i < loginData.length; i++) {
     await expect(demoWebShopPage.getLogedInUserLinkValue()).resolves.toContain(loginData[i].email);
     await expect(demoWebShopPage.getLogoutLinkValue()).resolves.toContain(testData[0].LogOut);
   });
+
 };
