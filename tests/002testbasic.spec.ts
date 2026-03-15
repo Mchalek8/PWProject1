@@ -16,6 +16,8 @@ const testData: any = JSON.parse(fs.readFileSync(jsonDataPath, 'utf-8'));
 
 });*/
 
+// Minor to git
+
 test('Basic search test2', {tag :['@sanity']}, async ({ page, demoWebShopPage, demoWebShopSearchPage }) => {
   // Navigate to the demo webshop, perform a search.
   await demoWebShopPage.gotoDemoWebShop();
