@@ -1,5 +1,6 @@
 import { test, expect } from '../pages/base';
 import { faker } from '@faker-js/faker';
+import { clear } from 'console';
 //import path from 'path';
 import fs from 'fs';
 
@@ -88,7 +89,7 @@ test('Random Register test', async ({ page, demoWebShopRegisterPage, demoWebShop
 });
 
 for (let i = 0; i < loginData.length; i++) {
-  test(`Basic Login ${loginData[i].Username} test`, {tag :['@PlaywrightWithJenkins']}, async ({ page, demoWebShopPage, demoWebShopLoginPage }) => {
+  test(`Basic Login ${loginData[i].Username} testik`, async ({ page, demoWebShopPage, demoWebShopLoginPage }) => {
     // Navigate to the demo webshop
     await demoWebShopPage.gotoDemoWebShop();
 
