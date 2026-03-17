@@ -1,0 +1,5 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","7104","Basic search test","chromium","2026-03-17","passed","2026-03-17","","001testbasic.spec.ts","",""
+"","7345","Check Top Menu Links Texts","chromium","2026-03-17","passed","2026-03-17","","001testbasic.spec.ts","",""
+"","6738","Basic search test2","chromium","2026-03-17","passed","2026-03-17","","002testbasic.spec.ts","",""
+"","4916","Check Top Menu Links Texts2","chromium","2026-03-17","passed","2026-03-17","","002testbasic.spec.ts","",""
