@@ -18,7 +18,7 @@ const testData: any = JSON.parse(fs.readFileSync(jsonDataPath, 'utf-8'));
 
 // Minor to git
 
-test('Basic search test2', {tag :['@sanity']}, async ({ page, demoWebShopPage, demoWebShopSearchPage }) => {
+test('Basic search test2', {tag :['@sanity', '@regression']}, async ({ page, demoWebShopPage, demoWebShopSearchPage }) => {
   // Navigate to the demo webshop, perform a search.
   await demoWebShopPage.gotoDemoWebShop();
   await demoWebShopPage.setSearchField(testData[0].searchComputerValue);
@@ -34,7 +34,7 @@ test('Basic search test2', {tag :['@sanity']}, async ({ page, demoWebShopPage, d
   console.log("Basic search test was executed.2");
 });
 
-test('Check Top Menu Links Texts2', {tag :['@sanity']}, async ({ page, demoWebShopPage }) => {
+test('Check Top Menu Links Texts2', {tag :['@regression']}, async ({ page, demoWebShopPage }) => {
   // Navigate to the demo webshop, perform a search.
   await demoWebShopPage.gotoDemoWebShop();
   //await page.waitForTimeout(4000);
