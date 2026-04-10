@@ -23,15 +23,15 @@ export default defineConfig({
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   //reporter: 'html',
-  reporter: [["line"], ["allure-playwright"]],
-  //reporter: [['html', {open:'never', outputFolder: 'html-report'}],
+  //reporter: [["line"], ["allure-playwright"]],
+  reporter: [['html', {open:'always', outputFolder: 'html-report'}],
              //['list'],
-             //['line'],
+             ['line'],
              //['dot'],
              //['junit',{outputFile:'junit-report/results.xml'}],
              //['json',{outputFile:'json-report/results.json'}],
-             //['allure-playwright'] // for this report install "npm install -D allure-playwright"
-          //],
+             ['allure-playwright'] // for this report install "npm install -D allure-playwright"
+          ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */
