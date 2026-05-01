@@ -1,0 +1,45 @@
+{
+  "moduleTestData": {
+    "searchValues": {
+      "computer": "computer",
+      "laptop": "laptop",
+      "gift": "gift"
+    },
+    "registerCompleted": {
+      "register": "Register",
+      "completeMessage": "Your registration completed"
+    },
+    "headerLinks": {
+      "login": "Log in",
+      "logout": "Log out",
+      "register": "Register",
+      "shoppingCart": "Shopping cart",
+      "wishlist": "Wishlist"
+    },
+    "headerMenu": {
+      "books": "Books",
+      "computers": "Computers",
+      "electronics": "Electronics",
+      "apparelAndShoes": "Apparel & Shoes",
+      "digitalDownloads": "Digital downloads",
+      "jewelry": "Jewelry",
+      "giftCards": "Gift Cards"
+    },
+    "bookHeader": {
+      "books": "Books",
+      "sortBy": {
+        "position": "Position",
+        "nameAZ": "Name: A to Z",
+        "nameZA": "Name: Z to A",
+        "priceLowToHigh": "Price: Low to High",
+        "priceHighToLow": "Price: High to Low",
+        "createdOn": "Created on"
+      },
+      "displayPerPage": {
+        "four": "4",
+        "eigth": "8",
+        "twelve": "12"
+      }      
+    }    
+  }
+}

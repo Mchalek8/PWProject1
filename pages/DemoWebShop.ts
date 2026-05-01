@@ -28,7 +28,14 @@ export class DemoWebShop {
     }
 
     async gotoDemoWebShop(): Promise<void> {
-        await this.page.goto('https://demowebshop.tricentis.com/');
+        //await this.page.goto('https://demowebshop.tricentis.com/');
+        if (process.env.TEST_EXECUTION_ENV == 'qa') {
+            await this.page.goto(`${process.env.HOME_URL_QA}`);
+            console.log('QA environment');
+        } else if (process.env.TEST_EXECUTION_ENV == 'dev') {
+            await this.page.goto(`${process.env.HOME_URL_DEV}`);
+            console.log('DEV environment');
+        }
     }
 
     async setSearchField(searchTerm: string): Promise<void> {
@@ -67,4 +74,10 @@ export class DemoWebShop {
     async getElectronicsTopMenText(): Promise<string> {
         return await this.electronicsTopMenuLink.textContent() || '';
     }
+
+    // Navigation section
+    async gotoBooksPage(): Promise<void> {
+        await this.booksTopMenuLink.click();
+    }
+
 }

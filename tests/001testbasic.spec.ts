@@ -1,6 +1,5 @@
 import { test, expect } from '../pages/base';
 import { faker } from '@faker-js/faker';
-import { clear } from 'console';
 //import path from 'path';
 import fs from 'fs';
 
