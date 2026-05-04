@@ -1,4 +1,4 @@
-import { Locator, Page } from "@playwright/test";
+import { Locator, Page, expect } from "@playwright/test";
 
 export class DemoWebShop {
     readonly page: Page;
@@ -11,6 +11,7 @@ export class DemoWebShop {
     readonly booksTopMenuLink: Locator;
     readonly computersTopMenuLink: Locator;
     readonly electronicsTopMenuLink: Locator;
+    readonly headerLinksWrapper: Locator;
     
 
 
@@ -25,6 +26,7 @@ export class DemoWebShop {
         this.booksTopMenuLink = page.getByRole('link', { name: 'Books' }).first();
         this.computersTopMenuLink = page.getByRole('link', { name: 'Computers' }).first();
         this.electronicsTopMenuLink = page.getByRole('link', { name: 'Electronics' }).first();
+        this.headerLinksWrapper = page.locator('.header-links-wrapper');
     }
 
     async gotoDemoWebShop(): Promise<void> {
@@ -79,5 +81,11 @@ export class DemoWebShop {
     async gotoBooksPage(): Promise<void> {
         await this.booksTopMenuLink.click();
     }
+
+    async checkHeaderLinksText(userEmail: string): Promise<boolean> {
+        const text = await this.headerLinksWrapper.innerText();
+        const containText =  text.includes(userEmail);
+        return containText;
+    }    
 
 }

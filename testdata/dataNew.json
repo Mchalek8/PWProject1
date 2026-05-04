@@ -39,7 +39,11 @@
         "four": "4",
         "eigth": "8",
         "twelve": "12"
-      }      
+      },
+      "viewAs": {
+        "grid": "Grid",
+        "list": "List"
+      }  
     }    
   }
 }

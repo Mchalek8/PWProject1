@@ -42,10 +42,16 @@ export interface DisplayPerPage {
   twelve: string;
 }
 
+export interface ViewAs {
+  grid: string;
+  list: string;
+}
+
 export interface BookHeader {
   books: string;
   sortBy: SortBy;
   displayPerPage: DisplayPerPage;
+  viewAs: ViewAs;
 }
 
 export interface ModuleTestData {

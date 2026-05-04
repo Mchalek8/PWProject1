@@ -17,8 +17,8 @@ test('Navigate to books page without data interface', {tag :['@sanity', '@regres
   await page.waitForTimeout(1000);
 
   // Select sort by A-Z option and display per page
-  await demoWebShopBooksPage.selectSortByDropDownAZOption(testData.moduleTestData.bookHeader.sortBy.nameAZ);
-  await demoWebShopBooksPage.selectdisplayPerPage(testData.moduleTestData.bookHeader.displayPerPage.four);
+  await demoWebShopBooksPage.selectSortByDropDown(testData.moduleTestData.bookHeader.sortBy.nameAZ);
+  await demoWebShopBooksPage.selectDisplayPerPageDropDown(testData.moduleTestData.bookHeader.displayPerPage.four);
   await page.waitForTimeout(2000);
 
   // Return number of products in grid

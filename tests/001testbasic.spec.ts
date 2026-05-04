@@ -17,20 +17,34 @@ const testData: any = JSON.parse(fs.readFileSync(jsonDataPath, 'utf-8'));
 });*/
 
 for (const { Username, FirstName, LastName, email, password } of loginData) {
-  test(`JSON Register ${Username} test`, async ({ page, demoWebShopPage, demoWebShopRegisterPage }) => {
+  test(`Register if not exist ${Username} test`, async ({ page, demoWebShopPage, demoWebShopRegisterPage, demoWebShopLoginPage }) => {
     // Navigate to the demo webshop
     await demoWebShopPage.gotoDemoWebShop();
 
-    // Navigate to the register page and perform registration
-    await demoWebShopRegisterPage.navigateToDemoWebShopRegister();
-    await demoWebShopRegisterPage.setMaleRadioButton();
-    await demoWebShopRegisterPage.setFirstNameField(FirstName);
-    await demoWebShopRegisterPage.setLastNameField(LastName);
-    await demoWebShopRegisterPage.setEmailField(email);
-    await demoWebShopRegisterPage.setPasswordField(password);
-    await demoWebShopRegisterPage.setConfirmPasswordField(password);
-    await demoWebShopRegisterPage.clickRegisterButton();
-    await page.waitForTimeout(5000);
+    // Check if user already exists
+    // Navigate to the login page and perform login
+    await demoWebShopLoginPage.navigateToDemoWebShopLogin();
+    await demoWebShopLoginPage.setEmailField(email);
+    await demoWebShopLoginPage.setPasswordField(password);
+    await demoWebShopLoginPage.clickLoginButton();
+    await page.waitForTimeout(2000);
+
+    const loginCheck = await demoWebShopPage.checkHeaderLinksText(email);
+
+    if (loginCheck) {
+      console.log("User already exists");
+    } else {
+      // Navigate to the register page and perform registration
+      await demoWebShopRegisterPage.navigateToDemoWebShopRegister();
+      await demoWebShopRegisterPage.setMaleRadioButton();
+      await demoWebShopRegisterPage.setFirstNameField(FirstName);
+      await demoWebShopRegisterPage.setLastNameField(LastName);
+      await demoWebShopRegisterPage.setEmailField(email);
+      await demoWebShopRegisterPage.setPasswordField(password);
+      await demoWebShopRegisterPage.setConfirmPasswordField(password);
+      await demoWebShopRegisterPage.clickRegisterButton();
+      await page.waitForTimeout(5000);
+    }
 
   });
 };

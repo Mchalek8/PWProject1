@@ -5,8 +5,9 @@ export class DemoWebShopBooks {
     readonly homeLink: Locator;
     readonly booksText: Locator;
     readonly sortByDropDown: Locator;
-    readonly productGrid: Locator
-    readonly displayPerPage: Locator
+    readonly productGrid: Locator;
+    readonly displayPerPageDropDown: Locator;
+    readonly viewAsDropDown: Locator;
 
     constructor(page: Page) {
         this.page = page;
@@ -14,28 +15,26 @@ export class DemoWebShopBooks {
         this.booksText = page.getByRole('heading', { name: 'Books' });
         this.sortByDropDown = page.locator('#products-orderby');
         this.productGrid = page.locator('.product-grid .item-box');
-        this.displayPerPage = page.locator('#products-pagesize');
+        this.displayPerPageDropDown = page.locator('#products-pagesize');
+        this.viewAsDropDown = page.locator('#products-viewmode');
     }
 
     async navigateToDemoWebShop(): Promise<void> {
         await this.homeLink.click();
     }
 
-    async selectSortByDropDownAZOption(value:string): Promise<void> {
+    // Drobdowns Sort By
+    async selectSortByDropDown(value:string): Promise<void> {
         await this.sortByDropDown.selectOption({ label: `${value}` });
     }
-
-    async selectdisplayPerPage(value:string): Promise<void> {
-        await this.displayPerPage.selectOption({ label: `${value}` });
+    // Drobdowns Display per page
+    async selectDisplayPerPageDropDown(value:string): Promise<void> {
+        await this.displayPerPageDropDown.selectOption({ label: `${value}` });
     }
-    
-    // async selectSortByDropDownAZOption(): Promise<void> {
-    //     await this.sortByDropDown.selectOption({ label: 'Name: A to Z' });
-    // }  
-    
-    // async selectSortByDropDownAZOption(): Promise<void> {
-    //     await this.sortByDropDown.selectOption({ label: 'Name: A to Z' });
-    // }      
+    // Drobdowns View as
+    async selectViewAsDropDown(value: string): Promise<void> {
+        await this.viewAsDropDown.selectOption({ label: `${value}` });
+    }
 
     async countOfGridProducts(): Promise<number> {
         return await this.productGrid.count();

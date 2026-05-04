@@ -6,9 +6,11 @@ test('Navigate to books page JsonDataSafe', {tag :['@sanity', '@regression']}, a
   await demoWebShopPage.gotoBooksPage();
   await page.waitForTimeout(1000);
 
-  // Select sort by A-Z option
-  await demoWebShopBooksPage.selectSortByDropDownAZOption(String(testDataRoot.moduleTestData.bookHeader.sortBy.nameAZ));
-  await demoWebShopBooksPage.selectdisplayPerPage(String(testDataRoot.moduleTestData.bookHeader.displayPerPage.four));
+  // Select sort by A-Z option perPage 4, list and grid
+  await demoWebShopBooksPage.selectSortByDropDown(String(testDataRoot.moduleTestData.bookHeader.sortBy.nameAZ));
+  await demoWebShopBooksPage.selectDisplayPerPageDropDown(String(testDataRoot.moduleTestData.bookHeader.displayPerPage.four));
+  await demoWebShopBooksPage.selectViewAsDropDown(String(testDataRoot.moduleTestData.bookHeader.viewAs.list));
+  await demoWebShopBooksPage.selectViewAsDropDown(String(testDataRoot.moduleTestData.bookHeader.viewAs.grid));
   await page.waitForTimeout(2000);
 
   // Return number of products in grid
