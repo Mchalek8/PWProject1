@@ -96,6 +96,7 @@ test('Random Register test', async ({ page, demoWebShopRegisterPage, demoWebShop
 
   // Assertions
   await expect(demoWebShopRegisterPage.getRegisterConfirmText()).resolves.toContain(testData[0].Register);
+  await expect(await page.title()).toContain(testData[0].registerPageTitle);
   await demoWebShopRegisterPage.clickContinueButton();
   await expect(demoWebShopPage.logoutLink).toHaveText(testData[0].LogOut);
 

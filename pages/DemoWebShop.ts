@@ -13,8 +13,6 @@ export class DemoWebShop {
     readonly electronicsTopMenuLink: Locator;
     readonly headerLinksWrapper: Locator;
     
-
-
     constructor(page: Page) {
         this.page = page;
         this.searchField = page.locator('#small-searchterms');
@@ -66,7 +64,6 @@ export class DemoWebShop {
 
     async getBooksTopMenText(): Promise<string> {
         return await this.booksTopMenuLink.textContent() || '';
-        //return await this.booksTopMenuLink.textContent() || '';
     }
 
     async getComputersTopMenText(): Promise<string> {

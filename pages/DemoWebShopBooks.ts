@@ -27,10 +27,12 @@ export class DemoWebShopBooks {
     async selectSortByDropDown(value:string): Promise<void> {
         await this.sortByDropDown.selectOption({ label: `${value}` });
     }
+
     // Drobdowns Display per page
     async selectDisplayPerPageDropDown(value:string): Promise<void> {
         await this.displayPerPageDropDown.selectOption({ label: `${value}` });
     }
+    
     // Drobdowns View as
     async selectViewAsDropDown(value: string): Promise<void> {
         await this.viewAsDropDown.selectOption({ label: `${value}` });

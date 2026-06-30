@@ -3,8 +3,10 @@
 		"LogIn": "Log in",
 		"LogOut": "Log out",
 		"Register": "Register",
+		"registerPageTitle": "Demo Web Shop. Register",		
 		"searchComputerValue": "computer",
 		"searchLaptopValue": "laptop",
+        "searchGiftValue": "gift",		
         "booksTopMenText": "Books",
 		"computersTopMenText": "Computers",
 		"electronicsTopMenText": "Electronics"
@@ -13,8 +15,12 @@
 		"LogIn": "Log in",
 		"LogOut": "Log out",
 		"Register": "Register",
-		"searchComputerValue": "computer",
+		"registerPageTitle": "Demo Web Shop. Register",		
+		"searchComputerValue": "computer2",
 		"searchLaptopValue": "laptop2",
-        "searchGiftValue": "gift"
+        "searchGiftValue": "gift2",		
+        "booksTopMenText": "Books2",
+		"computersTopMenText": "Computers2",
+		"electronicsTopMenText": "Electronics2"
 	}      
 ]

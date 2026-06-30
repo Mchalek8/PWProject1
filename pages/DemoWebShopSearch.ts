@@ -50,5 +50,4 @@ export class DemoWebShopSearch {
         //console.log(itemTexts);  
         return itemTexts;
     }
-
-    };
+};
